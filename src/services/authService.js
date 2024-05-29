@@ -145,6 +145,7 @@ export const getLoginStatus = async () => {
     try {
         const response = await axios.get(
             `${BE_URL}/api/users/loggedin`,
+            {withCredentials:true}
         );
         return response.data
     }
